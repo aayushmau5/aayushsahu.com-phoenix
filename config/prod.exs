@@ -11,7 +11,7 @@ import Config
 # before starting your production server.
 config :iframe, IframeWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json",
-  url: [host: "localhost", port: 3000]
+  check_origin: ["https://aayushsahu.com"]
 
 # Do not print debug messages in production
 config :logger, level: :info
