@@ -2,7 +2,6 @@ defmodule Iframe.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
-
   use Application
 
   @impl true
@@ -14,9 +13,10 @@ defmodule Iframe.Application do
       {Phoenix.PubSub, name: Iframe.PubSub},
       IframeWeb.Presence,
       # Start the Endpoint (http/https)
-      IframeWeb.Endpoint
+      IframeWeb.Endpoint,
       # Start a worker by calling: Iframe.Worker.start_link(arg)
       # {Iframe.Worker, arg}
+      {Redix, Application.fetch_env!(:redix, :config)}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

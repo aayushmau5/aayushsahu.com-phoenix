@@ -7,12 +7,9 @@ defmodule IframeWeb.UserSocket do
   # assign values that can be accessed by your channel topics.
 
   ## Channels
-  # Uncomment the following line to define a "room:*" topic
-  # pointing to the `IframeWeb.RoomChannel`:
-  #
   channel "user-join", IframeWeb.UserJoinChannel
   channel "blog:*", IframeWeb.BlogChannel
-  #
+
   # To create a channel file, use the mix task:
   #
   #     mix phx.gen.channel Room
